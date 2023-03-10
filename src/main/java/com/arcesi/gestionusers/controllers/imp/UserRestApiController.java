@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.arcesi.gestionusers.controllers.IUserApiRest;
 import com.arcesi.gestionusers.dtos.UserDTO;
+import com.arcesi.gestionusers.dtos.requestdto.UserRequest;
 import com.arcesi.gestionusers.dtos.responsedto.UserResponse;
 import com.arcesi.gestionusers.services.IUserRestService;
 import com.arcesi.gestionusers.utils.Constants;
@@ -37,6 +38,42 @@ public class UserRestApiController implements IUserApiRest {
 		List<UserResponse> userResponses = userDtos.stream().filter(a -> a != null).map(UserDTO::UserDTOToUserResponse)
 				.collect(Collectors.toList());
 		return new ResponseEntity<List<UserResponse>>(userResponses,HttpStatus.OK);
+	}
+
+	@Override
+	public ResponseEntity<UserResponse> findOneByCodeUniqueClient(String codeUnique) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<UserResponse> findOneUserByName(String nom) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<UserResponse> findUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<UserResponse> updateUser(UserRequest userRequest, Long code) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<Object> deleteUser(Long code) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<UserResponse> createUser(UserRequest userRequest) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
